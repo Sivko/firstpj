@@ -14,6 +14,12 @@
   }
 }
 
+
+.myClass{
+  display:  block;
+}
+
+
 body {
   color: var(--foreground);
   background: var(--background);
