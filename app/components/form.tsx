@@ -4,6 +4,7 @@ interface ITaskItem {
     id: number
     name: string
     createAtAdd: string
+    isActive: boolean
 }
 
 export default function FristComponent() {
@@ -11,17 +12,32 @@ export default function FristComponent() {
     const [taskName, setTaskName] = useState('')
     const [taskList, setTaskList] = useState<ITaskItem[]>([])
 
+
     function handleAddTask(e: any) {
         e.preventDefault();
 
-        if(taskName == ''){
+        if (taskName == '') {
             return;
-        } 
+        }
 
         setTaskList((prev) => {
-            return [...prev, { id: new Date().getTime(), name: taskName, "createAtAdd": "123" }]
+            return [...prev, { id: new Date().getTime(), name: taskName, "createAtAdd": "123", isActive: false }]
         })
 
+
+    }
+
+
+    function toggleActive(id: number) {
+
+        setTaskList((prev) => {
+
+
+                setTaskList(prev => prev.filter((item) => item.id !== id))
+                return [...prev, { id: new Date().getTime(), name: taskName, "createAtAdd": "123", isActive: true }]    
+                
+
+        })
 
     }
 
@@ -32,14 +48,14 @@ export default function FristComponent() {
     function firstFunction() {
         setTaskList(prev => {
             const x = JSON.parse(JSON.stringify(prev))
-            return x.sort((a, b) => a.id - b.id)
+            return x.sort((a: any, b: any) => a.id - b.id)
         })
     }
 
     function secondFunction() {
         setTaskList(prev => {
             const x = JSON.parse(JSON.stringify(prev))
-            return x.sort((a, b) => b.id - a.id)
+            return x.sort((a: any, b: any) => b.id - a.id)
         })
     }
 
@@ -69,7 +85,7 @@ export default function FristComponent() {
                 {taskList.map((item) => (
                     <li key={item.id}>
                         <div className="flex justify-between border-2 rounded-none p-1 mb-3">
-                            {item.id}
+                            <button onClick={() => toggleActive(item.id)}>{JSON.stringify(item.isActive)}</button>
                             <h3 className="">{item.name}</h3>
                             <button onClick={() => handleDeleteTask(item.id)} className="border-2 rounded-none p-1 text-xs">Удалить</button>
                         </div>
