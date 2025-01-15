@@ -1,10 +1,11 @@
 import Image from "next/image";
-import FristCompomemtd from "./components/form";
+import HeaderDesctop from "./components/Header-desctop";
+import HeaderMobile from "./components/Header-mobile";
 
 export default function Home() {
   return (
     <div>
-      <FristCompomemtd />
+      <HeaderMobile />
     </div>
   );
 }
