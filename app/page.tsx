@@ -1,14 +1,10 @@
 import Image from "next/image";
-import HeaderDesctop from "./components/Header-desctop";
-import HeaderMobile from "./components/Header-mobile";
-import ViewTest from "./components/ViewTest";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
     <div>
-      <HeaderDesctop/>
-      <ViewTest />
-      <HeaderMobile />
+      <Header/>
     </div>
   );
 }

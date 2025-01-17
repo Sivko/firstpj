@@ -13,6 +13,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link nonce="c59aa59a-aaa6-400a-943e-eea6a6df1e68" rel="preload" as="font" fetchPriority="high" href="//st.ozone.ru/s3/ozon-fonts/gt-eesti-pro-display-medium.woff2" type="font/woff2" crossOrigin="anonymous" />
+        <link nonce="c59aa59a-aaa6-400a-943e-eea6a6df1e68" rel="preload" as="font" fetchPriority="high" href="//st.ozone.ru/s3/ozon-fonts/gt-eesti-pro-display-medium-italic.woff2" type="font/woff2" crossOrigin="anonymous"/>
+        <link nonce="c59aa59a-aaa6-400a-943e-eea6a6df1e68" rel="preload" as="font" fetchPriority="high" href="//st.ozone.ru/s3/ozon-fonts/gt-eesti-pro-display-regular.woff2" type="font/woff2" crossOrigin="anonymous"/>
+        <link nonce="c59aa59a-aaa6-400a-943e-eea6a6df1e68" rel="preload" as="font" fetchPriority="high" href="//st.ozone.ru/s3/ozon-fonts/gt-eesti-pro-display-bold.woff2" type="font/woff2" crossOrigin="anonymous"/>
+      </head>
       <body
         className={` antialiased`}
       >
