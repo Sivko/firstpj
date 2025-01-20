@@ -23,7 +23,7 @@ import { hover } from 'motion';
 
 export default function Header() {
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto w-[1416px] w-min-[1050px] '>
             <div className='flex flex-row justify-end text-[12px] mt-1'>
                 <Link
                     className='hover:text-blue-600 ml-3 text-black bg-blue-100 rounded px-[4px]'
@@ -56,8 +56,8 @@ export default function Header() {
                         alt='logo'
                     />
                 </Link>
-                <div className='border-2 border-blue-600 rounded-md mr-4 ml-4 w-[140px] h-[40px] bg-blue-600 text-white text-[17px] flex justify-center items-center'>
-                    <Link className='flex justify-center items-center' href=''>
+                <div className='hover:bg-blue-500 hover:border-blue-500 border-2 border-blue-600 rounded-md mr-4 ml-4 w-[140px] h-[40px] bg-blue-600 text-white text-[17px] flex justify-center items-center'>
+                    <Link className='flex justify-center items-center ' href=''>
                         <AiFillProduct size={25} />
                         <span className='ml-1'>Каталог</span>
                     </Link>
